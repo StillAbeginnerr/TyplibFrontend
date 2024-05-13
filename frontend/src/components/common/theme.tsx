@@ -7,6 +7,7 @@ const theme = extendTheme({
                 variant : 'ghost',
                 colorScheme:'teal',
             }
+            
         }
     }
 });

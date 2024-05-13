@@ -1,8 +1,13 @@
-import { Box, Button, Flex, Stack} from '@chakra-ui/react'
+import { Box, Button, Collapse, Flex, IconButton, Stack, useDisclosure} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
 import React from 'react'
 import './button.css'
 
 function Navbar() {
+
+    const { isOpen, onToggle } = useDisclosure();
+
   return (
   <>
   <Box>
@@ -15,7 +20,27 @@ function Navbar() {
 <Button colorScheme='gray' variant='outline'>X Credits Free</Button>
     </Stack>
     </Flex>
-    
+
+<Flex>
+<IconButton
+style={{position:'relative', left:'.75rem',top:'1rem'}}
+          w={12}
+          h={12}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={'Open Menu'}
+          display={{ md: 'none' }}
+          onClick={onToggle}
+        />
+        <Collapse in={isOpen} animateOpacity>
+        <Stack  style={{position:'relative', left:'.75rem',top:'2rem',lineHeight:'2rem'}} direction='column' p={12} display={{ md: 'none', base:'flex' }}>
+        <Button colorScheme='gray'>Home</Button>
+<Button colorScheme='gray'>How it works</Button>
+<Button colorScheme='gray'>Support</Button>
+<Button colorScheme='blue' variant='solid'>Join the Community</Button>
+<Button colorScheme='gray' variant='outline'>X Credits Free</Button>
+        </Stack>
+      </Collapse>
+</Flex>
   </Box>
   </>
   )
