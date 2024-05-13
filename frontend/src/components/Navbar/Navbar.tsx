@@ -11,6 +11,8 @@ function Navbar() {
   <>
 
 <Box>
+    {/* Desktop Nav Starts*/}
+    
     <Flex>
     <Stack style={{position:'relative', left:'14.5rem',top:'2rem'}} gap="8" direction='row' display={{base: 'none', md: 'flex'}}>
 <Button  as='a' href='/' colorScheme='gray'>Home</Button>
@@ -21,7 +23,9 @@ function Navbar() {
     </Stack>
     </Flex>
 
+    {/* Desktop Nav Ends*/}
 
+{/* MobileHamburger Starts*/}
 <Flex>
 <IconButton
 style={{position:'relative', left:'.75rem',top:'1rem'}}
@@ -42,6 +46,7 @@ style={{position:'relative', left:'.75rem',top:'1rem'}}
         </Stack>
       </Collapse>
 </Flex>
+{/* MobileHamburger Ends*/}
   </Box>
 
 
