@@ -12,7 +12,7 @@ function Navbar() {
 
 <Box>
     {/* Desktop Nav Starts*/}
-    
+
     <Flex>
     <Stack style={{position:'relative', left:'14.5rem',top:'2rem'}} gap="8" direction='row' display={{base: 'none', md: 'flex'}}>
 <Button  as='a' href='/' colorScheme='gray'>Home</Button>
@@ -37,7 +37,7 @@ style={{position:'relative', left:'.75rem',top:'1rem'}}
           onClick={onToggle}
         />
         <Collapse in={isOpen} animateOpacity>
-        <Stack  style={{position:'relative', left:'.75rem',top:'2rem',lineHeight:'2rem'}} direction='column' p={12} display={{ md: 'none', base:'flex' }}>
+        <Stack  style={{position:'relative',top:'2rem',lineHeight:'2rem'}} align='center' direction='column' p={12} display={{ md: 'none', base:'flex' }}>
         <Button as='a' href='/' colorScheme='gray'>Home</Button>
 <Button colorScheme='gray'>How it works</Button>
 <Button colorScheme='gray'>Support</Button>
