@@ -1,7 +1,6 @@
 import { Box, Button, Collapse, Flex, IconButton, Stack, useDisclosure} from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import React from 'react'
 import './button.css'
 
 function Navbar() {
@@ -10,16 +9,18 @@ function Navbar() {
 
   return (
   <>
-  <Box>
+
+<Box>
     <Flex>
     <Stack style={{position:'relative', left:'14.5rem',top:'2rem'}} gap="8" direction='row' display={{base: 'none', md: 'flex'}}>
-<Button colorScheme='gray'>Home</Button>
+<Button  as='a' href='/' colorScheme='gray'>Home</Button>
 <Button colorScheme='gray'>How it works</Button>
 <Button colorScheme='gray'>Support</Button>
-<Button colorScheme='blue' variant='solid'>Join the Community</Button>
+<Button as='a' href='/authentication' colorScheme='blue' variant='solid'  >Join the Community</Button>
 <Button colorScheme='gray' variant='outline'>X Credits Free</Button>
     </Stack>
     </Flex>
+
 
 <Flex>
 <IconButton
@@ -42,6 +43,8 @@ style={{position:'relative', left:'.75rem',top:'1rem'}}
       </Collapse>
 </Flex>
   </Box>
+
+
   </>
   )
 }
