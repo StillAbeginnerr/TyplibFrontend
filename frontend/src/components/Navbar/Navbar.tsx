@@ -34,10 +34,10 @@ style={{position:'relative', left:'.75rem',top:'1rem'}}
         />
         <Collapse in={isOpen} animateOpacity>
         <Stack  style={{position:'relative', left:'.75rem',top:'2rem',lineHeight:'2rem'}} direction='column' p={12} display={{ md: 'none', base:'flex' }}>
-        <Button colorScheme='gray'>Home</Button>
+        <Button as='a' href='/' colorScheme='gray'>Home</Button>
 <Button colorScheme='gray'>How it works</Button>
 <Button colorScheme='gray'>Support</Button>
-<Button colorScheme='blue' variant='solid'>Join the Community</Button>
+<Button  as='a' href='/authentication' colorScheme='blue' variant='solid'>Join the Community</Button>
 <Button colorScheme='gray' variant='outline'>X Credits Free</Button>
         </Stack>
       </Collapse>
